@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,7 +11,12 @@ public class Lotto {
         Random rand = new Random();
         for (int i = 0; i < 6; i++) {
             inputs[i] = input.nextInt();
+        }
+        for (int i = 0; i < 6; i++) {
             numbers[i] = rand.nextInt(49)+1;
+            if (Arrays.asList(numbers).contains(numbers[i])){
+                i--;
+            }
         }
         System.out.print("Wygrywające liczby w Lotto to: ");
         for (int i = 0; i < 6; i++) {
