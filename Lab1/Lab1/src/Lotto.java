@@ -17,6 +17,17 @@ public class Lotto {
             System.out.print(numbers[i]);
             System.out.print(" ");
         }
+        int matches = 0;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (inputs[i] == numbers[j]) {
+                    matches++;
+                }
+            }
+        }
+        System.out.println();
+        System.out.print("Liczba trafionych liczb: ");
+        System.out.println(matches);
 
     }
 }
