@@ -4,6 +4,7 @@ module org.example.symulatorgui {
 
     requires org.controlsfx.controls;
 
+
     opens org.example.symulatorgui to javafx.fxml;
     exports org.example.symulatorgui;
 }

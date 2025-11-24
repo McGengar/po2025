@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.symulatorgui.HelloController">
     <top>
         <VBox BorderPane.alignment="CENTER">
             <children>
@@ -13,21 +13,21 @@
                     <menus>
                         <Menu mnemonicParsing="false" text="Plik">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="Otwórz" />
-                                <MenuItem mnemonicParsing="false" text="Zapisz" />
+                                <MenuItem mnemonicParsing="false" text="Otwórz" fx:id="ContexMenuOpen"/>
+                                <MenuItem mnemonicParsing="false" text="Zapisz" fx:id="ContextMenuSave"/>
                                 <SeparatorMenuItem mnemonicParsing="false" />
-                                <MenuItem mnemonicParsing="false" text="Zamknij" />
+                                <MenuItem mnemonicParsing="false" text="Zamknij" fx:id="ContextMenuClose"/>
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Edycja">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="Cofnij" />
-                                <MenuItem mnemonicParsing="false" text="Ponów" />
+                                <MenuItem mnemonicParsing="false" text="Cofnij" fx:id="ContextMenuUndo"/>
+                                <MenuItem mnemonicParsing="false" text="Ponów" fx:id="ContextMenuRedo" />
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Samochód">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="Opcja 1" />
+                                <MenuItem mnemonicParsing="false" text="Opcja 1" fx:id="CarMenuOption1" />
                             </items>
                         </Menu>
                     </menus>
@@ -35,9 +35,9 @@
                 <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
                     <children>
                         <Label text="Samochód:" />
-                        <ComboBox prefWidth="150.0" />
-                        <Button mnemonicParsing="false" text="Dodaj nowy" />
-                        <Button mnemonicParsing="false" text="Usuń" />
+                        <ComboBox prefWidth="150.0" fx:id="CarSelectionComboBox" />
+                        <Button mnemonicParsing="false" text="Dodaj nowy" fx:id="AddNewCarButton" />
+                        <Button mnemonicParsing="false" text="Usuń" fx:id="RemoveCarButton" />
                     </children>
                     <padding>
                         <Insets left="10.0" />
@@ -70,10 +70,10 @@
                                         <Label text="Nr rejestracyjny" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Prędkość" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField GridPane.columnIndex="1" fx:id="CarModelTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="CarRegNrTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="CarWeightTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="CarSpeedTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -81,9 +81,9 @@
                                 </GridPane>
                                 <HBox alignment="CENTER_LEFT" prefHeight="30.0" spacing="10.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Włącz" />
-                                        <Button mnemonicParsing="false" text="Wyłącz" />
-                                        <Button mnemonicParsing="false" text="Button" />
+                                        <Button mnemonicParsing="false" text="Włącz" fx:id="CarTurnOnButton" />
+                                        <Button mnemonicParsing="false" text="Wyłącz" fx:id="CarTurnOffButton" />
+                                        <Button mnemonicParsing="false" text="Button" fx:id="CarActionButton" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="5.0" />
@@ -114,10 +114,10 @@
                                         <Label text="Cena" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Bieg" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField GridPane.columnIndex="1" fx:id="GearboxNameTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="GearboxPriceTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="GearboxWeightTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="GearboxGearTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -125,8 +125,8 @@
                                 </GridPane>
                                 <HBox alignment="CENTER" prefHeight="30.0" spacing="10.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Zwiększ bieg" />
-                                        <Button mnemonicParsing="false" text="Zmniejsz bieg" />
+                                        <Button mnemonicParsing="false" text="Zwiększ bieg" fx:id="GearboxShiftUpButton" />
+                                        <Button mnemonicParsing="false" text="Zmniejsz bieg" fx:id="GearboxShiftDownButton" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" top="5.0" />
@@ -157,10 +157,10 @@
                                         <Label text="Cena" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Obroty" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField GridPane.columnIndex="1" fx:id="EngineNameTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="EnginePriceTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="EngineWeightTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="EngineRPMTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -168,8 +168,8 @@
                                 </GridPane>
                                 <HBox alignment="CENTER" prefHeight="30.0" spacing="10.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Dodaj gazu" />
-                                        <Button mnemonicParsing="false" text="Ujmij gazu" />
+                                        <Button mnemonicParsing="false" text="Dodaj gazu" fx:id="EngineAccelerateButton" />
+                                        <Button mnemonicParsing="false" text="Ujmij gazu" fx:id="EngineDecelerateButton" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" top="5.0" />
@@ -200,10 +200,10 @@
                                         <Label text="Cena" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Stan" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField GridPane.columnIndex="1" fx:id="ClutchNameTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="ClutchPriceTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="ClutchWeightTextField" />
+                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="ClutchStatusTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -211,8 +211,8 @@
                                 </GridPane>
                                 <HBox alignment="CENTER" prefHeight="30.0" spacing="10.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Naciśnij" />
-                                        <Button mnemonicParsing="false" text="Zwolnij" />
+                                        <Button mnemonicParsing="false" text="Naciśnij" fx:id="ClutchEngageButton" />
+                                        <Button mnemonicParsing="false" text="Zwolnij" fx:id="ClutchDisengageButton" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" top="5.0" />
@@ -232,11 +232,11 @@
         <AnchorPane style="-fx-background-color: lightgreen;" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="14.0" layoutY="14.0" text="Mapa" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@honda.png" />
-               </image>
-            </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@honda.png" />
+                    </image>
+                </ImageView>
             </children>
         </AnchorPane>
     </center>
