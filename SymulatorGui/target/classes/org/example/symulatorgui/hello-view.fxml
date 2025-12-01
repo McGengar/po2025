@@ -70,10 +70,10 @@
                                         <Label text="Nr rejestracyjny" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Prędkość" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" fx:id="CarModelTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="CarRegNrTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="CarWeightTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="CarSpeedTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" fx:id="CarModelTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="CarRegNrTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="CarWeightTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="CarSpeedTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -114,10 +114,10 @@
                                         <Label text="Cena" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Bieg" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" fx:id="GearboxNameTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="GearboxPriceTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="GearboxWeightTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="GearboxGearTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" fx:id="GearboxNameTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="GearboxPriceTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="GearboxWeightTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="GearboxGearTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -157,10 +157,10 @@
                                         <Label text="Cena" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Obroty" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" fx:id="EngineNameTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="EnginePriceTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="EngineWeightTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="EngineRPMTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" fx:id="EngineNameTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="EnginePriceTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="EngineWeightTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="EngineRPMTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -200,10 +200,10 @@
                                         <Label text="Cena" GridPane.rowIndex="1" />
                                         <Label text="Waga" GridPane.rowIndex="2" />
                                         <Label text="Stan" GridPane.rowIndex="3" />
-                                        <TextField GridPane.columnIndex="1" fx:id="ClutchNameTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="ClutchPriceTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="ClutchWeightTextField" />
-                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="ClutchStatusTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" fx:id="ClutchNameTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="ClutchPriceTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="ClutchWeightTextField" />
+                                        <TextField editable="False" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="ClutchStatusTextField" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -232,10 +232,10 @@
         <AnchorPane style="-fx-background-color: lightgreen;" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="14.0" layoutY="14.0" text="Mapa" />
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@honda.png" />
-                    </image>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" fx:id="carImageView" >
+<!--                    <image>-->
+<!--                        <Image url="@honda.png" />-->
+<!--                    </image>-->
                 </ImageView>
             </children>
         </AnchorPane>

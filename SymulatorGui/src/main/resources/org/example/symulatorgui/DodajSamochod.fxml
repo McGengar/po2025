@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.symulatorgui.DodajSamochodController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox prefHeight="250.0" prefWidth="350.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" >
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+        <children>
+            <Label style="-fx-font-size: 14pt; -fx-font-weight: bold;" text="Formularz Samochodu" />
+
+            <GridPane hgap="10.0" vgap="10.0">
+                <columnConstraints>
+                    <javafx.scene.layout.ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                    <javafx.scene.layout.ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Model:" />
+                    <Label text="Numer rejestracyjny:" GridPane.rowIndex="1" />
+                    <Label text="Waga:" GridPane.rowIndex="2" />
+                    <TextField fx:id="modelField" GridPane.columnIndex="1" />
+                    <TextField fx:id="regNumberField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="weightField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                </children>
+            </GridPane>
+
+            <VBox spacing="10.0">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                        <children>
+                            <Label prefWidth="120.0" text="Silnik:" />
+                            <ComboBox fx:id="engineComboBox" prefWidth="200.0" promptText="Wybierz silnik" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                        <children>
+                            <Label prefWidth="120.0" text="Skrzynia Biegów:" />
+                            <ComboBox fx:id="gearboxComboBox" prefWidth="200.0" promptText="Wybierz skrzynię" />
+                        </children>
+                    </HBox>
+                </children>
+                <VBox.margin>
+                    <Insets top="5.0" />
+                </VBox.margin>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <children>
+                    <Button fx:id="confirmButton" mnemonicParsing="false" text="Zatwierdź" />
+                    <Button fx:id="cancelButton" mnemonicParsing="false" text="Anuluj" />
+                </children>
+                <VBox.margin>
+                    <Insets top="10.0" />
+                </VBox.margin>
+            </HBox>
+        </children>
+    </VBox>
+</AnchorPane>

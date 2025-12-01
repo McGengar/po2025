@@ -5,7 +5,19 @@ public class SkrzyniaBiegow extends Komponent{
     int iloscBiegow;
     Sprzeglo sprzeglo;
 
-    public SkrzyniaBiegow(Sprzeglo sprzeglo,int aktualnyBieg, int iloscBiegow,int cena, int waga, String nazwa, String producent, String model) {
+    public int getAktualnyBieg() {
+        return aktualnyBieg;
+    }
+
+    public int getIloscBiegow() {
+        return iloscBiegow;
+    }
+
+    public Sprzeglo getSprzeglo() {
+        return sprzeglo;
+    }
+
+    public SkrzyniaBiegow(Sprzeglo sprzeglo, int aktualnyBieg, int iloscBiegow, int cena, int waga, String nazwa, String producent, String model) {
         this.aktualnyBieg = aktualnyBieg;
         this.iloscBiegow = iloscBiegow;
         this.cena = cena;

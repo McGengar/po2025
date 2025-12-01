@@ -3,6 +3,10 @@ package symulator;
 public class Sprzeglo extends Komponent{
     boolean stanSprzegla;
 
+    public boolean getStanSprzegla() {
+        return stanSprzegla;
+    }
+
     public Sprzeglo() {
         this.stanSprzegla = false;
         this.cena = 0.0;

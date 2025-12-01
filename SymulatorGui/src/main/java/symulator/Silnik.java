@@ -4,6 +4,14 @@ public class Silnik extends Komponent{
     int maxObroty;
     int obroty;
 
+    public int getMaxObroty() {
+        return maxObroty;
+    }
+
+    public int getObroty() {
+        return obroty;
+    }
+
     public Silnik(int maxObroty, int obroty, int cena, int waga, String nazwa, String producent, String model){
         this.maxObroty=maxObroty;
         this.obroty=obroty;

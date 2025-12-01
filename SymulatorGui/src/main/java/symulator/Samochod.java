@@ -9,6 +9,40 @@ public class Samochod{
     String model;
     int predkoscMax;
 
+    public int getWaga() {
+        return waga;
+    }
+
+    int waga;
+
+    public Pozycja getPozycja() {
+        return pozycja;
+    }
+
+    public Silnik getSilnik() {
+        return silnik;
+    }
+
+    public SkrzyniaBiegow getSkrzynia() {
+        return skrzynia;
+    }
+
+    public boolean isStanWlaczenia() {
+        return stanWlaczenia;
+    }
+
+    public int getNrRejest() {
+        return nrRejest;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getPredkoscMax() {
+        return predkoscMax;
+    }
+
     public Samochod(Pozycja pozycja, Silnik silnik, SkrzyniaBiegow skrzynia, boolean stanWlaczenia, int nrRejest, String model, int predkoscMax) {
         this.pozycja = pozycja;
         this.silnik = silnik;
