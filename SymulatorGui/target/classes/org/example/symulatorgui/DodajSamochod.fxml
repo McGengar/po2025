@@ -17,27 +17,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.example.symulatorgui.DodajSamochodController"
             prefHeight="400.0" prefWidth="600.0">
-    <VBox prefHeight="250.0" prefWidth="350.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-    Jasne, z przyjemnością zmodyfikuję kod formularza zgodnie z Twoimi instrukcjami.
-
-    Zacznę od nowego pliku FXML (możesz go nazwać np. CarFormV2.fxml), który używa VBox jako głównego kontenera, zawiera pola tekstowe dla Modelu, Numeru Rejestracyjnego i Wagi, a także dodaje mechanizm wyboru Silnika i Skrzyni Biegów za pomocą ComboBox (list rozwijalnych). Na koniec dodam przyciski z wymaganymi identyfikatorami.
-
-    ⚙️ Zmodyfikowany kod FXML (Formularz Samochodu)
-
-    XML
-
-    <?xml version="1.0" encoding="UTF-8"?>
-
-    <?import javafx.geometry.Insets?>
-    <?import javafx.scene.control.Button?>
-    <?import javafx.scene.control.ComboBox?>
-    <?import javafx.scene.control.Label?>
-    <?import javafx.scene.control.TextField?>
-    <?import javafx.scene.layout.GridPane?>
-    <?import javafx.scene.layout.HBox?>
-    <?import javafx.scene.layout.VBox?>
-
-    <VBox prefHeight="350.0" prefWidth="350.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox prefHeight="250.0" prefWidth="350.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" >
         <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
         </padding>
@@ -58,9 +38,11 @@
                     <Label text="Model:" />
                     <Label text="Numer rejestracyjny:" GridPane.rowIndex="1" />
                     <Label text="Waga:" GridPane.rowIndex="2" />
+                    <Label text="Maksymalna prędkość:" GridPane.rowIndex="3" />
                     <TextField fx:id="modelField" GridPane.columnIndex="1" />
                     <TextField fx:id="regNumberField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     <TextField fx:id="weightField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField fx:id="MaxSpeedField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 </children>
             </GridPane>
 
