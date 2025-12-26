@@ -3,7 +3,7 @@ package symulator;
 public class Silnik extends Komponent{
     int maxObroty;
     int obroty;
-
+    public boolean wlaczony = false;
     public int getMaxObroty() {
         return maxObroty;
     }
@@ -23,7 +23,7 @@ public class Silnik extends Komponent{
 
     }
     public Silnik(){
-        this.maxObroty=6700;
+        this.maxObroty=6000;
         this.obroty=0;
         this.cena = 0.0;
         this.waga = 0.0;
@@ -32,20 +32,26 @@ public class Silnik extends Komponent{
         this.model = "";
     }
 
-    void uruchom(){
+    public void uruchom(){
         this.obroty=0;
+        this.wlaczony=true;
     }
-    void zatrzymaj(){
+    public void zatrzymaj(){
         this.obroty=0;
+        this.wlaczony=false;
     }
-    void zwiekszObroty(){
-        if(this.obroty<this.maxObroty) {
-            this.obroty += 1;
+    public void zwiekszObroty(){
+        if(this.obroty<this.maxObroty && this.wlaczony) {
+            this.obroty += 100;
         }
     }
-    void zmniejszObroty(){
-        if(this.obroty>0) {
-            this.obroty -= 1;
+    public void zmniejszObroty(){
+        if(this.obroty>0 && this.wlaczony) {
+            this.obroty -= 100;
         }
+    }
+    @Override
+    public String toString() {
+        return this.nazwa;
     }
 }

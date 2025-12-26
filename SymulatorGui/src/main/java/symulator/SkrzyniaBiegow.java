@@ -39,14 +39,18 @@ public class SkrzyniaBiegow extends Komponent{
         this.model = "";
     }
 
-    void zwiekszBieg(){
+    public void zwiekszBieg(){
         if(this.aktualnyBieg<this.iloscBiegow && this.sprzeglo.stanSprzegla){
             this.aktualnyBieg+=1;
         }
     }
-    void zmniejszBieg(){
+    public void zmniejszBieg(){
         if(this.aktualnyBieg>0 && this.sprzeglo.stanSprzegla) {
             this.aktualnyBieg-=1;
         }
+    }
+    @Override
+    public String toString() {
+        return this.nazwa;
     }
 }

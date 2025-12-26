@@ -9,29 +9,7 @@
     <top>
         <VBox BorderPane.alignment="CENTER">
             <children>
-                <MenuBar>
-                    <menus>
-                        <Menu mnemonicParsing="false" text="Plik">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="Otwórz" fx:id="ContexMenuOpen"/>
-                                <MenuItem mnemonicParsing="false" text="Zapisz" fx:id="ContextMenuSave"/>
-                                <SeparatorMenuItem mnemonicParsing="false" />
-                                <MenuItem mnemonicParsing="false" text="Zamknij" fx:id="ContextMenuClose"/>
-                            </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" text="Edycja">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="Cofnij" fx:id="ContextMenuUndo"/>
-                                <MenuItem mnemonicParsing="false" text="Ponów" fx:id="ContextMenuRedo" />
-                            </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" text="Samochód">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="Opcja 1" fx:id="CarMenuOption1" />
-                            </items>
-                        </Menu>
-                    </menus>
-                </MenuBar>
+
                 <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
                     <children>
                         <Label text="Samochód:" />
@@ -83,7 +61,6 @@
                                     <children>
                                         <Button mnemonicParsing="false" text="Włącz" fx:id="CarTurnOnButton" />
                                         <Button mnemonicParsing="false" text="Wyłącz" fx:id="CarTurnOffButton" />
-                                        <Button mnemonicParsing="false" text="Button" fx:id="CarActionButton" />
                                     </children>
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="5.0" />
@@ -229,7 +206,7 @@
         </VBox>
     </left>
     <center>
-        <AnchorPane style="-fx-background-color: #a095ed;" BorderPane.alignment="CENTER">
+        <AnchorPane style="-fx-background-color: #a095ed;" BorderPane.alignment="CENTER" fx:id="mapa">
             <children>
                 <Label layoutX="14.0" layoutY="14.0" text="Mapa" />
                 <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" fx:id="carImageView" >

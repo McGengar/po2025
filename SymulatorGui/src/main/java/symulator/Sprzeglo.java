@@ -25,10 +25,10 @@ public class Sprzeglo extends Komponent{
     }
 
 
-    void wcisnij(){
+    public void wcisnij(){
         stanSprzegla=true;
     }
-    void zwolnij(){
+    public void zwolnij(){
         stanSprzegla=false;
     }
 }
